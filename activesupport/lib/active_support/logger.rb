@@ -1,7 +1,9 @@
 
 module ActiveSupport
 
-  module Logger
+  class Logger
+    def initialize(*splat)
+    end
   end
 
 end

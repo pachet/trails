@@ -11,6 +11,10 @@ module ActiveRecord
       @@table_name = table_name
     end
 
+    def Base.logger=(logger)
+      @@logger = logger
+    end
+
     def Base.has_many(symbol, callback = nil, mapping = nil)
     end
 
