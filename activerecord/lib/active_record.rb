@@ -1,9 +1,6 @@
-
+require "active_support"
 require "active_model"
-require "active_record/base"
-require "active_record/schema"
-require "active_record/delegation"
-
-module ActiveRecord
-
-end
+require_relative "active_record/base"
+require_relative "active_record/schema"
+require_relative "active_record/delegation"
+require_relative "active_record/connection_adapters"
