@@ -173,6 +173,14 @@ module ActiveRecord
     end
 
 
+
+
+
+
+    def Base.clear_active_connections!
+    end
+
+
   end
 
 end

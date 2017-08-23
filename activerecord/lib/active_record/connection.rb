@@ -14,6 +14,10 @@ module ActiveRecord
     def create_table(*splat)
     end
 
+    def disable_referential_integrity
+      yield
+    end
+
   end
 
 end
