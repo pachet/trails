@@ -11,6 +11,9 @@ module ActiveRecord
       "sqlite3"
     end
 
+    def create_table(*splat)
+    end
+
   end
 
 end
