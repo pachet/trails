@@ -1,4 +1,4 @@
 
-class ActiveRecord
+module ActiveRecord
 
 end
