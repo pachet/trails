@@ -1,4 +1,6 @@
 
+require_relative "connection"
+
 module ActiveRecord
 
   class Base
@@ -13,6 +15,18 @@ module ActiveRecord
 
     def Base.logger=(logger)
       @@logger = logger
+    end
+
+    def Base.configurations=(configurations)
+      @@configurations = configurations
+    end
+
+    def Base.establish_connection(*splat)
+      @@connection = ActiveRecord::Connection.new
+    end
+
+    def Base.connection
+      @@connection
     end
 
     def Base.has_many(symbol, callback = nil, mapping = nil)
