@@ -21,6 +21,15 @@ module ActiveRecord
     end
 
 
+    def Base.table_name_prefix
+      'foo'
+    end
+
+    def Base.table_name_suffix
+      'bar'
+    end
+
+
     def Base.sequence_name=(sequence_name)
       @@sequence_name = sequence_name
     end
@@ -68,6 +77,10 @@ module ActiveRecord
       @@primary_key = primary_key
     end
 
+    def Base.connection_handler
+      @@conection_handler ||= ConnectionHandler.new
+    end
+
 
 
 
@@ -94,6 +107,10 @@ module ActiveRecord
     end
 
     def Base.attr_readonly(*splat)
+    end
+
+    def Base.pluralize_table_names
+      true
     end
 
 
@@ -179,6 +196,7 @@ module ActiveRecord
 
     def Base.clear_active_connections!
     end
+
 
 
   end
