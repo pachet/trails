@@ -1,5 +1,0 @@
-require "active_support"
-require "active_model"
-require_relative "active_record/base"
-require_relative "active_record/schema"
-require_relative "active_record/delegation"
